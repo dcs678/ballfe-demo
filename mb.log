@@ -1,0 +1,10 @@
+{"message":"[mb:2525] mountebank v2.0.0 now taking orders - point your browser to http://localhost:2525/ for help","level":"info","timestamp":"2019-10-12T04:40:21.784Z"}
+{"message":"[mb:2525] Running with --allowInjection set. See http://localhost:2525/docs/security for security info","level":"warn","timestamp":"2019-10-12T04:40:21.785Z"}
+{"message":"[mb:2525] PUT /imposters","level":"info","timestamp":"2019-10-12T04:40:21.806Z"}
+{"message":"[http:8070 demo-server:http://localhost:8070/api/menu] Open for business...","level":"info","timestamp":"2019-10-12T04:40:21.827Z"}
+{"message":"[http:8070 demo-server:http://localhost:8070/api/menu] ::1:57485 => GET /api/menu","level":"info","timestamp":"2019-10-12T04:40:23.776Z"}
+{"message":"[http:8070 demo-server:http://localhost:8070/api/menu] request path=api/menu","level":"info","timestamp":"2019-10-12T04:40:23.982Z"}
+{"message":"[http:8070 demo-server:http://localhost:8070/api/menu] request data=","level":"info","timestamp":"2019-10-12T04:40:23.982Z"}
+{"message":"[http:8070 demo-server:http://localhost:8070/api/menu] ::1:57486 => GET /favicon.ico","level":"info","timestamp":"2019-10-12T04:40:24.373Z"}
+{"message":"[http:8070 demo-server:http://localhost:8070/api/menu] request path=favicon.ico","level":"info","timestamp":"2019-10-12T04:40:24.385Z"}
+{"message":"[http:8070 demo-server:http://localhost:8070/api/menu] request data=","level":"info","timestamp":"2019-10-12T04:40:24.386Z"}

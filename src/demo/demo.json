@@ -1,0 +1,94 @@
+{
+	"name": "demo-server:http://localhost:8070/api/menu",
+	"port": 8070,
+	"protocol": "http",
+	"stubs": [
+		{
+			"name": "/api/menu",
+			"predicates": [{
+				"equals": {
+					"path": "/api/menu"
+				}
+			}],
+			"responses": [{
+				"is": {
+					"statusCode": 200,
+					"headers": {
+						"Content-Type": "application/json charset=utf-8",
+						"Access-Control-Allow-Origin": "*",
+						"Access-Control-Allow-Methods": "*",
+						"Access-Control-Allow-Headers": "Content-Type,XFILENAME,XFILECATEGORY,XFILESIZE",
+						"Access-Control-Allow-Credentials": "true",
+						"Access-Control-Allow-Headers": "Content-Type,Access-Token",
+						"Access-Control-Expose-Headers": "*",
+						"Custom-Header": ""
+					},
+					"body": {
+						"status": 200,
+						"message": "",
+						"city": "",
+						"timestamp": 1534844188679,
+						"uid": "",
+						"result": [{
+							"title": "首页",
+							"key": "",
+							"name": "index",
+							"component": "BasicLayout",
+							"redirect": "/dashboard/workplace",
+							"children": [{
+									"title": "仪表盘",
+									"key": "dashboard",
+									"component": "RouteView",
+									"icon": "dashboard",
+									"key": "dashboard",
+									"children": [{
+											"title": "分析页",
+											"key": "analysis",
+											"icon": ""
+										},
+										{
+											"title": "监控页",
+											"key": "monitor",
+											"icon": ""
+										},
+										{
+											"title": "工作台",
+											"key": "workplace",
+											"icon": ""
+										}
+									]
+								}
+							]
+						}]
+					}
+				},
+				"_behaviors": {
+					"wait": 10,
+					"decorate": "(config) => {config.logger.info('request path='+config.request.path.slice(1)); config.logger.info('request data='+config.request.body); }",
+					"shellTransform": [
+						"node ./src/demo/demo.js"
+					]
+				}
+			}]
+		},
+		{
+			"responses": [{
+				"is": {
+					"statusCode": 400,
+					"headers": {
+						"Content-Type": "application/json;  charset=utf-8",
+						"Access-Control-Allow-Origin": "*"
+					},
+					"body": {
+						"code": "bad-request",
+						"message": "档板未配置"
+					}
+				},
+				"_behaviors": {
+					"wait": 10,
+					"decorate": "(config) => {config.logger.info('request path='+config.request.path.slice(1)); config.logger.info('request data='+config.request.body); }"
+				}
+			}]
+		}
+	]
+}
